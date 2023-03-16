@@ -1,2 +1,5 @@
-package PACKAGE_NAME;public class UserOrBookDoesNotExistException {
+public class UserOrBookDoesNotExistException extends Exception {
+    public UserOrBookDoesNotExistException(String message) {
+        super(message);
+    }
 }
