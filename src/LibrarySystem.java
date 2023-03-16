@@ -14,6 +14,7 @@ public class LibrarySystem {
     }
 
     public void addBookWithTitleAndAuthorList(String title, List<Author> authors) throws EmptyAuthorListException {
+        if(authors.size()==0) throw new EmptyAuthorListException("Author list cannot be empty");
         Book book = new Book(title, authors);
         books.add(book);
     }
